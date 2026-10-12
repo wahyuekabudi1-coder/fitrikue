@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#e4beba","surface-container-highest":"#ebe1d5","background":"#fff8f2","on-background":"#1f1b14","inverse-surface":"#353028","secondary":"#705954","outline":"#8f706c","surface-container-low":"#fcf2e6","on-tertiary":"#ffffff","on-surface-variant":"#5b403d","primary-fixed-dim":"#ffb4ac","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffdbca","on-primary":"#ffffff","inverse-primary":"#ffb4ac","on-surface":"#1f1b14","tertiary":"#843900","secondary-fixed":"#fadcd5","on-secondary":"#ffffff","tertiary-fixed-dim":"#ffb68e","error-container":"#ffdad6","on-tertiary-fixed":"#331200","primary-container":"#c62828","tertiary-container":"#aa4b00","inverse-on-surface":"#f9efe3","on-secondary-fixed-variant":"#56423e","surface-dim":"#e2d9cd","on-tertiary-fixed-variant":"#773300","on-primary-container":"#ffe0dd","on-error":"#ffffff","surface-container-high":"#f0e7db","surface-bright":"#fff8f2","surface-variant":"#ebe1d5","primary-fixed":"#ffdad6","primary":"#a20513","on-error-container":"#93000a","error":"#ba1a1a","on-primary-fixed":"#410003","surface-container":"#f6ece1","on-tertiary-container":"#ffe0d2","surface":"#fff8f2","on-secondary-container":"#745d58","on-secondary-fixed":"#281814","on-primary-fixed-variant":"#93000e","surface-tint":"#b91d20","secondary-container":"#f7d9d3","secondary-fixed-dim":"#ddc0ba"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xxl":"4rem","margin-tablet":"2rem","space-md":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","margin":"3rem","gutter-mobile":"1rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-mobile":"1.25rem"},"fontFamily":{"headline-md-mobile":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"title-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"label-sm":["Plus Jakarta Sans"],"title-sm":["Plus Jakarta Sans"],"display":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"display-mobile":["Playfair Display"],"title-md":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"]},"fontSize":{"headline-md-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg-mobile":["30px",{"lineHeight":"36px","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"title-sm":["16px",{"lineHeight":"22px","fontWeight":"600"}],"display":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"600"}],"title-md":["18px",{"lineHeight":"24px","fontWeight":"600"}],"headline-sm":["22px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">cake</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Sweet Bakery</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Admin Atelier</span></div></div><div class="px-space-md py-space-xs"><div class="h-px bg-surface-container-high w-full"></div></div><nav class="flex flex-col gap-1 px-space-md py-space-sm" data-active-classes="bg-primary text-on-primary font-title-sm text-title-sm shadow-sm"><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-kpi" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Dashboard &amp; KPI</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="kalender-produksi-oven" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Kalender Produksi</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="manajemen-pesanan" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Manajemen Pesanan</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="verifikasi-pembayaran" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">payments</span><span>Verifikasi Bayar</span></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">4</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="katalog-produk-cms" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">bakery_dining</span><span>Katalog &amp; CMS</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="laporan-keuangan" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span>Laporan &amp; Keuangan</span></div></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pengaturan-toko" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Pengaturan Toko</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-1.5 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary">Status Dapur</span><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span></div><p class="font-title-sm text-title-sm text-on-surface leading-tight">Dapur Senopati: Aktif</p><div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md mt-0.5"><span>Kapasitas Oven</span><span class="font-bold text-tertiary">85%</span></div><div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-0.5"><div class="bg-tertiary h-full rounded-full" style="width: 85%"></div></div></div><div class="pt-space-xs flex items-center justify-between p-2 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0"><span class="material-symbols-outlined text-[20px]">person</span></div><div class="flex flex-col min-w-0"><span class="font-title-sm text-title-sm text-on-surface truncate">Chef Adit</span><span class="font-label-sm text-label-sm text-secondary truncate">Head Pastry &amp; Admin</span></div></div><a class="p-2 text-on-surface-variant hover:text-error hover:bg-surface-container-high rounded-lg transition-colors" href="#" title="Keluar"><span class="material-symbols-outlined text-[20px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg min-w-0 flex-1"><div class="hidden xl:flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm whitespace-nowrap"><span class="material-symbols-outlined text-[18px]">home</span><span>/</span><span class="font-title-sm text-title-sm text-on-surface capitalize">Atelier Back-office</span></div><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span><input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest rounded-xl font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-all" placeholder="Cari no. pesanan, pelanggan, atau produk..." type="text"/></div></div><div class="flex items-center gap-space-sm shrink-0"><button class="relative p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Notifikasi Dapur &amp; Urgent Alerts" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2.5 h-2.5 bg-primary rounded-full ring-2 ring-surface"></span></button><button class="hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-surface-container-low text-on-surface font-title-sm text-title-sm hover:bg-surface-container-high transition-colors shadow-[0_1px_8px_rgba(0,0,0,0.04)]" type="button"><span class="material-symbols-outlined text-tertiary text-[18px]">timer</span><span>Slot Oven Hari Ini</span></button><button class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-all shadow-[0_4px_14px_rgba(198,40,40,0.25)]" type="button"><span class="material-symbols-outlined text-[20px]">add</span><span class="hidden md:inline">+ Tambah Pesanan Manual</span><span class="md:hidden">Tambah</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-lg flex flex-col gap-space-lg max-w-[1600px] mx-auto w-full">
+<!-- Top Summary & Control Bar -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+            Live Atelier Sync
+          </span>
+<span class="text-secondary font-label-md text-label-md">• Dapur Senopati Atelier #01</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight text-primary">
+          Ikhtisar Operasional &amp; KPI Atelier
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">skillet</span>
+<span>Live Produksi: <strong class="text-on-surface font-semibold">Shift Pagi (06:00 - 14:00 WIB)</strong></span>
+<span class="text-outline-variant">|</span>
+<span>Lead Pastry: Chef Adit &amp; Tim Bakeri 4 Personel</span>
+</p>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest rounded-xl p-1 shadow-sm">
+<span class="material-symbols-outlined text-secondary pl-2.5 pr-1 text-[20px]">calendar_today</span>
+<select class="bg-transparent font-title-sm text-title-sm text-on-surface pr-3 py-1.5 focus:outline-none cursor-pointer">
+<option>Pekan Ini (12 - 18 Okt 2026)</option>
+<option>Hari Ini (14 Okt 2026)</option>
+<option>Bulan Ini (Oktober 2026)</option>
+</select>
+</div>
+<button class="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-title-sm text-title-sm hover:bg-surface-container-high transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">refresh</span>
+<span>Segarkan Data</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-secondary text-on-secondary font-title-sm text-title-sm hover:opacity-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Ekspor PDF Executive</span>
+</button>
+</div>
+</div>
+<!-- Alert Banner / Attention Grid -->
+<div class="rounded-2xl bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</span>
+<span class="font-title-md text-title-md text-on-surface tracking-tight">Perhatian Mendesak Hari Ini</span>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container">
+          3 Tindakan Perlu Respons
+        </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Alert 1 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-snug">4 Pembayaran DP Menunggu</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Verifikasi manual mutasi BCA &amp; QRIS sebelum slot oven otomatis terkunci.
+              </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-end">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-1 shadow-sm">
+<span>Verifikasi Sekarang</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[22px] shrink-0 mt-0.5">palette</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-snug">2 Wedding Cake H-2</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Butuh persetujuan sketsa fondant tingkat 3 oleh klien sebelum jam 12:00.
+              </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-end">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all flex items-center gap-1">
+<span>Buka Sketsa Studio</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="flex flex-col justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-sm gap-2">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">lock_clock</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-snug">Kapasitas Sabtu 18 Okt Kritis</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Tersisa 2 kuota sponge oven. Sistem otomatis menandai slot 'Hampir Penuh' di etalase.
+              </p>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Slot Terisi 23 / 25</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-all">
+              Kunci Kuota
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- 6 KPI Metric Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Pesanan Baru</span>
+<span class="w-8 h-8 rounded-xl bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">inbox</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold leading-none">6</span>
+<span class="font-label-md text-label-md text-secondary">Pesanan</span>
+</div>
+</div>
+<div class="mt-4 pt-2 flex flex-col gap-1 bg-surface-container-low p-2 rounded-xl">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+<span class="font-label-sm text-label-sm font-semibold">2 Dekat Lead Time</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Perlu konfirmasi &lt; 2 jam</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Aktif Diproses</span>
+<span class="w-8 h-8 rounded-xl bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">microwave</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-mobile text-display-mobile text-on-surface font-bold leading-none">24</span>
+<span class="font-label-md text-label-md text-secondary">Bake Order</span>
+</div>
+</div>
+<div class="mt-4 pt-2 flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex justify-between items-center">
+<span>Antrean Oven:</span>
+<strong class="text-on-surface">12</strong>
+</div>
+<div class="flex justify-between items-center">
+<span>Finishing Decor:</span>
+<strong class="text-on-surface">8</strong>
+</div>
+<div class="flex justify-between items-center">
+<span>Siap Ekspedisi:</span>
+<strong class="text-primary font-bold">4</strong>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Omzet Bruto</span>
+<span class="w-8 h-8 rounded-xl bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="font-title-lg text-title-lg text-on-surface font-bold leading-tight">Rp 42.850.000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Nilai pesanan bruto booked</span>
+</div>
+</div>
+<div class="mt-4 pt-2 flex items-center justify-between bg-surface-container-low p-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-secondary">Target Periode:</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Rp 50.000.000</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Uang Masuk Kas</span>
+<span class="w-8 h-8 rounded-xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="font-title-lg text-title-lg text-tertiary font-bold leading-tight">Rp 31.420.000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">DP &amp; Pelunasan Valid</span>
+</div>
+</div>
+<div class="mt-4 pt-2 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Realisasi</span>
+<span class="font-bold text-primary">73.3% Terealisasi</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 73.3%"></div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Piutang / Sisa DP</span>
+<span class="w-8 h-8 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="flex flex-col mt-1">
+<span class="font-title-lg text-title-lg text-primary font-bold leading-tight">Rp 11.430.000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Sisa wajib lunas H-1</span>
+</div>
+</div>
+<div class="mt-4 pt-2 bg-surface-container-low p-2 rounded-xl flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Jatuh Tempo Hari Ini:</span>
+<span class="font-label-md text-label-md font-bold text-primary">Rp 3.800.000</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between xl:col-span-1">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Utilisasi Oven</span>
+<span class="w-8 h-8 rounded-xl bg-surface-container-high text-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">heat</span>
+</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-mobile text-display-mobile text-tertiary font-bold leading-none">88%</span>
+<span class="font-label-md text-label-md text-secondary">Kapasitas</span>
+</div>
+</div>
+<div class="mt-4 pt-2 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">22 dari 25 slot hari ini</span>
+<span class="font-bold text-tertiary">Sisa 3 Slot</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Analytics & Operational Section (Two Column Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Oven Schedule Timeline & Artisan Visuals (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Oven Production Batches Timeline Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">oven_gen</span>
+</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Jadwal Produksi Oven</h3>
+<p class="font-label-sm text-label-sm text-secondary">Shift 01 &amp; 02 • Master Oven Deck A/B/C</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+              Suhu Rata-rata 175°C
+            </span>
+</div>
+<!-- Timeline items -->
+<div class="flex flex-col gap-space-md relative pl-4 mt-2">
+<!-- Timeline vertical track line -->
+<div class="absolute left-7 top-3 bottom-3 w-0.5 bg-surface-container-highest"></div>
+<!-- Batch 01 -->
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex-1 p-3 rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Batch 01 (07:00 WIB)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary">
+                    Selesai 08:30 WIB
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  6x Sponge Valrhona Chocolate &amp; Earl Grey Base
+                </p>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+<span>Deck Oven #1 • Status: Tahap Chilling &amp; Ganache</span>
+</div>
+</div>
+</div>
+<!-- Batch 02 (Active) -->
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm ring-4 ring-primary-fixed mt-0.5">
+<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
+</div>
+<div class="flex-1 p-3.5 rounded-xl bg-surface-container border-0 flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-title-sm text-title-sm text-primary font-bold">Batch 02 (09:30 WIB)</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">
+                    Sisa 35 Menit
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-medium">
+                  4x Raspberry Pistachio Layer Cake
+                </p>
+<div class="flex flex-col gap-1 pt-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Suhu Deck Oven #2: 165°C</span>
+<span>Progres: 65%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 65%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Batch 03 (Upcoming) -->
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</div>
+<div class="flex-1 p-3 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Batch 03 (13:00 WIB)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary">
+                    Dalam Persiapan
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  2x Lapis Legit Wijsman Spekoek (Panggang Lapis Manual)
+                </p>
+<div class="flex items-center gap-2 pt-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">egg</span>
+<span>Persiapan Adonan Telur &amp; Panaskan Oven Deck #3</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Deck Oven Status footer -->
+<div class="pt-space-xs flex items-center justify-between p-3 rounded-xl bg-surface-container-low text-on-surface font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+              Kapasitas Tersedia Shift Sore: 3 Slot Cake
+            </span>
+<button class="text-primary font-title-sm text-title-sm hover:underline">
+              Atur Slot Oven →
+            </button>
+</div>
+</div>
+<!-- Artisan Visual Showcase Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Inspeksi Visual Quality Control</span>
+<span class="font-label-sm text-label-sm text-secondary">Bake Log Shift 01</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative rounded-xl overflow-hidden group">
+<img class="w-full h-32 object-cover transition-transform group-hover:scale-105" data-alt="Close-up of artisan chocolate gateau cake with glossy mirror glaze, gold leaf leafing, freshly baked berries on marble bakery slab in soft natural daylight with warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrtVScbz3I3FLezOi2wLGA1-D7l38TVaYQVpgZh8faKFkmPsbQvHhlEmgRnFSYtkSDPSoiHVJUZm4MhhNGUgLRWENY09pewJqCM8oxFpx_nBIi1KkNjFieot0C4KpdsuYT_wxeekAa7fCHhQK7qztOkP_QfyA_a25NZ8OSw0SkSbkQpUc7PxgRbmMwoLKs4tlBNqHtv94_98_5OFSKtH-CE7GuYE2X7YgDBOhDZ-z-r9UPN7g66BU"/>
+<div class="absolute bottom-0 inset-x-0 p-2 bg-gradient-to-t from-black/80 to-transparent text-white font-label-sm text-label-sm">
+                Valrhona Dark Ganache #B-01
+              </div>
+</div>
+<div class="relative rounded-xl overflow-hidden group">
+<img class="w-full h-32 object-cover transition-transform group-hover:scale-105" data-alt="Delicate tiered wedding cake pastry assembly in kitchen bakery atelier, white buttercream texture, edible pressed flowers, elegant European pastry craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxu_7raB0Ha0PHSuT5nJul9LlPzJ8KLWHwgkXVopQv0PXcuPu0jqYecSZJpKucPM_SfzFZ4lp7YtGBpjtdxE-RWxhECJZykai2e2TU3cOMoQ16hLQ82izQNUp98l9fNYbQqcZJBrBSQYLNBbzkugPEz4DiY2H8Zc1xNystgMfmofxkmpIg6XP_R0Yavwn_JkkzXfz2yVhqyjUTGulXAGOH3Gpec4-m1vv0TVsoFk5kSWYMq7uL5Ro"/>
+<div class="absolute bottom-0 inset-x-0 p-2 bg-gradient-to-t from-black/80 to-transparent text-white font-label-sm text-label-sm">
+                Wedding Tier #SB-8942
+              </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Financial Breakdown & Production Volume Analysis (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Cash Realization & Financial Flow Widget -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface">Realisasi Arus Kas &amp; Piutang Klien</h3>
+<p class="font-label-sm text-label-sm text-secondary">Rasio pelunasan versus tanggal penyerahan kue</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Uang Masuk
+              </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+                Sisa Piutang
+              </span>
+</div>
+</div>
+<!-- Inline Bar Graphic Comparison -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-md">
+<!-- Metric 1: Total Omzet Breakdown -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-baseline">
+<span class="font-title-sm text-title-sm text-on-surface">Komposisi Pendapatan Pekan Ini</span>
+<span class="font-title-sm text-title-sm text-tertiary">Total: Rp 42.850.000</span>
+</div>
+<div class="w-full h-6 rounded-lg bg-surface-container-highest overflow-hidden flex">
+<!-- Paid Portion -->
+<div class="bg-primary h-full flex items-center justify-center text-on-primary font-label-sm text-label-sm px-2" style="width: 73.3%">
+                  73.3% Terealisasi (Rp 31.42jt)
+                </div>
+<!-- Pending Portion -->
+<div class="bg-secondary-fixed h-full flex items-center justify-center text-on-secondary-fixed font-label-sm text-label-sm px-2" style="width: 26.7%">
+                  26.7% Piutang (Rp 11.43jt)
+                </div>
+</div>
+</div>
+<!-- Mini stats row inside graphic container -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-2">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">DP Lunas 50%</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Rp 19.820.000</span>
+<span class="font-label-sm text-label-sm text-tertiary">18 Pesanan Aktif</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Pelunasan 100% (Lunas)</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Rp 11.600.000</span>
+<span class="font-label-sm text-label-sm text-primary">6 Pesanan Siap Kirim</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary">Menunggu Pembayaran</span>
+<span class="font-title-sm text-title-sm text-primary font-semibold">Rp 11.430.000</span>
+<span class="font-label-sm text-label-sm text-secondary">Wajib Sebelum Dispatch</span>
+</div>
+</div>
+</div>
+<!-- Weekly Volume Sparkline Chart (SVG) -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-on-surface">Distribusi Beban Panggang Harian (Kapasitas Oven)</span>
+<span class="font-label-sm text-label-sm text-secondary">Maksimum 25 Slot/Hari</span>
+</div>
+<!-- Custom responsive SVG Bar visualization -->
+<div class="w-full h-36 bg-surface-container-low rounded-xl p-3 flex items-end justify-between gap-2">
+<!-- Sen -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">18</span>
+<div class="w-full max-w-[28px] bg-secondary rounded-t-md" style="height: 60%"></div>
+<span class="font-label-sm text-label-sm text-secondary">Sen 12</span>
+</div>
+<!-- Sel -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">21</span>
+<div class="w-full max-w-[28px] bg-secondary rounded-t-md" style="height: 75%"></div>
+<span class="font-label-sm text-label-sm text-secondary">Sel 13</span>
+</div>
+<!-- Rab (Hari Ini) -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-primary font-bold">22</span>
+<div class="w-full max-w-[28px] bg-primary rounded-t-md shadow-sm" style="height: 88%"></div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Rab 14</span>
+</div>
+<!-- Kam -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">19</span>
+<div class="w-full max-w-[28px] bg-secondary rounded-t-md" style="height: 68%"></div>
+<span class="font-label-sm text-label-sm text-secondary">Kam 15</span>
+</div>
+<!-- Jum -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">24</span>
+<div class="w-full max-w-[28px] bg-tertiary rounded-t-md" style="height: 94%"></div>
+<span class="font-label-sm text-label-sm text-secondary">Jum 16</span>
+</div>
+<!-- Sab (Weekend Peak) -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-primary font-bold">23</span>
+<div class="w-full max-w-[28px] bg-primary-container rounded-t-md" style="height: 92%"></div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Sab 17</span>
+</div>
+<!-- Min -->
+<div class="flex-1 flex flex-col items-center gap-1.5 h-full justify-end">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">17</span>
+<div class="w-full max-w-[28px] bg-secondary rounded-t-md" style="height: 56%"></div>
+<span class="font-label-sm text-label-sm text-secondary">Min 18</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chef & Atelier Notes -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Catatan Briefing Pagi Chef</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                "Pastikan butter temper ke 21°C sebelum folding batch Lapis Legit jam 13:00. Prioritaskan pesanan Clara Anindya untuk dispatch kurir jam 14:30."
+              </p>
+</div>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-highest text-on-surface font-label-md text-label-md shrink-0 hover:bg-surface-container transition-colors">
+            Sunting Catatan
+          </button>
+</div>
+</div>
+</div>
+<!-- Table Section: Pesanan Terbaru & Status Tindakan Cepat -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Table Header & Filter Row -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-1">
+<div class="flex flex-col">
+<h2 class="font-title-lg text-title-lg text-on-surface font-bold">Pesanan Terbaru &amp; Status Tindakan Cepat</h2>
+<p class="font-label-sm text-label-sm text-secondary">Sinkronisasi langsung dengan booking portal &amp; kurir atelier</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container-low rounded-xl px-2.5 py-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary mr-1">filter_list</span>
+<span>Filter Status: Semua (5 Ditampilkan)</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+            Lihat Semua Pesanan (48)
+          </button>
+</div>
+</div>
+<!-- Table Wrapper -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-3.5 rounded-l-xl">No. Pesanan</th>
+<th class="py-3 px-3.5">Pelanggan</th>
+<th class="py-3 px-3.5">Produk &amp; Varian</th>
+<th class="py-3 px-3.5">Tgl Dibutuhkan</th>
+<th class="py-3 px-3.5">Total Nilai</th>
+<th class="py-3 px-3.5">DP Terverifikasi</th>
+<th class="py-3 px-3.5">Sisa Pelunasan</th>
+<th class="py-3 px-3.5">Status Pesanan</th>
+<th class="py-3 px-3.5">Status Finansial</th>
+<th class="py-3 px-3.5 rounded-r-xl text-right">Aksi Cepat</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<!-- Row 1 (Clara Anindya - Ready for Dispatch) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-3.5 font-bold font-title-sm text-title-sm text-primary">
+                #SB-2026-8942
+              </td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Clara Anindya</span>
+<span class="text-secondary font-label-sm text-label-sm">WA: 0812-9844-xxxx</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Artisan Opera Cake Tiered</span>
+<span class="text-secondary font-label-sm text-label-sm">D: 22cm • Custom Gold Text</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-bold text-on-surface">14 Okt • 15:00 WIB</span>
+<span class="text-primary font-label-sm text-label-sm font-semibold">Hari Ini (H-0)</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 font-semibold whitespace-nowrap">
+                Rp 2.450.000
+              </td>
+<td class="py-3.5 px-3.5 text-secondary whitespace-nowrap">
+                Rp 2.450.000
+              </td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="font-bold text-secondary">Rp 0 (Lunas)</span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Siap Antar
+                </span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+                  Lunas 100%
+                </span>
+</td>
+<td class="py-3.5 px-3.5 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm" title="Panggil Kurir Atelier">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Kirim Resi via WhatsApp">
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 (Waiting DP Verification) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest">
+<td class="py-3.5 px-3.5 font-bold font-title-sm text-title-sm text-on-surface">
+                #SB-2026-8945
+              </td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Bambang Sutedjo</span>
+<span class="text-secondary font-label-sm text-label-sm">BCA Transfer • Struk Diunggah</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Lapis Legit Wijsman Spekoek</span>
+<span class="text-secondary font-label-sm text-label-sm">Box Eksklusif 20x20cm</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">15 Okt • 11:00 WIB</span>
+<span class="text-secondary font-label-sm text-label-sm">Besok (H-1)</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 font-semibold whitespace-nowrap">
+                Rp 850.000
+              </td>
+<td class="py-3.5 px-3.5 text-secondary whitespace-nowrap">
+                Rp 0 (Pending)
+              </td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="font-bold text-primary">Rp 850.000</span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Menunggu Verifikasi DP
+                </span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+                  Belum Verif
+                </span>
+</td>
+<td class="py-3.5 px-3.5 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-sm">
+                    Cek Bukti
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 (In Production Oven) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-3.5 font-bold font-title-sm text-title-sm text-on-surface">
+                #SB-2026-8940
+              </td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Devi Paramitha</span>
+<span class="text-secondary font-label-sm text-label-sm">Mandiri Virtual Acct</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Raspberry Pistachio Layer</span>
+<span class="text-secondary font-label-sm text-label-sm">Batch 02 Deck Oven #2</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">14 Okt • 17:00 WIB</span>
+<span class="text-primary font-label-sm text-label-sm">Hari Ini</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 font-semibold whitespace-nowrap">
+                Rp 1.350.000
+              </td>
+<td class="py-3.5 px-3.5 text-secondary whitespace-nowrap">
+                Rp 1.350.000
+              </td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="text-secondary">Rp 0 (Lunas)</span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Dalam Produksi Oven
+                </span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+                  Lunas 100%
+                </span>
+</td>
+<td class="py-3.5 px-3.5 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" title="Update Tahap Dapur">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 (Custom Wedding Cake - In Finishing) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-3.5 font-bold font-title-sm text-title-sm text-on-surface">
+                #SB-2026-8938
+              </td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Arif Pratama &amp; Sasa</span>
+<span class="text-secondary font-label-sm text-label-sm">BCA Corporate • DP 50%</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">3-Tier Botanical Wedding Cake</span>
+<span class="text-secondary font-label-sm text-label-sm">Fondant Hand-Sculpted Magnolia</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">16 Okt • 10:00 WIB</span>
+<span class="text-secondary font-label-sm text-label-sm">H-2 Acara</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 font-semibold whitespace-nowrap">
+                Rp 8.500.000
+              </td>
+<td class="py-3.5 px-3.5 text-secondary whitespace-nowrap">
+                Rp 4.250.000
+              </td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="font-bold text-primary">Rp 4.250.000 (H-1)</span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Finishing Decor
+                </span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+                  DP 50% Masuk
+                </span>
+</td>
+<td class="py-3.5 px-3.5 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors" title="Kirim Tagihan Pelunasan">
+                    Kirim Tagihan
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 5 (Completed) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-3.5 font-bold font-title-sm text-title-sm text-secondary">
+                #SB-2026-8929
+              </td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Nadira Khairunnisa</span>
+<span class="text-secondary font-label-sm text-label-sm">QRIS Instant Lunas</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Signature Earl Grey Madeleine (Box 12)</span>
+<span class="text-secondary font-label-sm text-label-sm">Hampers Custom Greeting Card</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="text-secondary font-medium">14 Okt • 09:00 WIB</span>
+<span class="text-secondary font-label-sm text-label-sm">Diterima Pemesan</span>
+</div>
+</td>
+<td class="py-3.5 px-3.5 font-semibold whitespace-nowrap">
+                Rp 420.000
+              </td>
+<td class="py-3.5 px-3.5 text-secondary whitespace-nowrap">
+                Rp 420.000
+              </td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="text-secondary">Rp 0</span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Selesai
+                </span>
+</td>
+<td class="py-3.5 px-3.5 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm">
+                  Lunas
+                </span>
+</td>
+<td class="py-3.5 px-3.5 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container-low text-secondary hover:text-on-surface transition-colors" title="Arsip Data Pesanan">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer with Kitchen Sync indicator -->
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Data terhubung secara real-time ke Printer Thermal Kitchen &amp; Bot Notifikasi WhatsApp Admin Atelier.</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="text-secondary">Terakhir disinkronisasi: 2 menit yang lalu</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
